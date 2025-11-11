@@ -8,11 +8,9 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class DashboardController extends AbstractController
 {
-    #[Route('/dashboard', name: 'app_dashboard')]
-    public function index(): Response
-    {
-        return $this->render('dashboard/index.html.twig', [
-            'message' => 'Welcome to the protected Dashboard!',
-        ]);
-    }
+  #[Route('/dashboard', name: 'dashboard')]
+  public function index(): Response
+  {
+    return $this->render('dashboard.html.twig');
+  }
 }
